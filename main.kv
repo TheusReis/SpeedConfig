@@ -1,0 +1,26 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    Label:
+        text: 'Digite o nome do Wi-Fi:'
+    TextInput:
+        id: name_wf
+
+    Label:
+        text: 'Digite a senha do Wi-Fi:'
+    TextInput:
+        id: pass_wf
+
+    Label:
+        text: 'Digite o PPPoE:'
+    TextInput:
+        id: wan_config
+
+    Label:
+        text: 'Digite a senha do modem:'
+    TextInput:
+        id: modem_password
+
+    Button:
+        text: 'Configurar Modem'
+        on_release: app.configure_modem(name_wf.text, pass_wf.text, wan_config.text, modem_password)
